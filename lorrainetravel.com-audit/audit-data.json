@@ -1,0 +1,123 @@
+{
+  "summary": {
+    "health_score": 78,
+    "business_type": "Local Service / luxury travel agency",
+    "top_findings": [
+      "Apex HTTPS handshake fails (verify)",
+      "9 destination pages share one meta description",
+      "No security headers",
+      "14 meta descriptions >160 chars",
+      "15 titles >60 chars"
+    ],
+    "quick_wins": [
+      "Unique destination descriptions",
+      "Shorten homepage title",
+      "Add security headers",
+      "Fix apex TLS",
+      "Alt text on 2 homepage images"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 74,
+      "what_works": [
+        "All URLs 200",
+        "Canonicals self-referencing",
+        "Sitemap and robots valid"
+      ],
+      "findings": [
+        {
+          "title": "Apex HTTPS handshake failure",
+          "severity": "High",
+          "description": "https://lorrainetravel.com fails TLS handshake from audit sandbox; www works.",
+          "recommendation": "Verify and fix certificate/redirect for the apex."
+        },
+        {
+          "title": "Missing security headers",
+          "severity": "Medium",
+          "description": "No HSTS, CSP, X-Frame-Options, X-Content-Type-Options in homepage response.",
+          "recommendation": "Add via Cloudflare or app."
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 70,
+      "what_works": [
+        "One H1 per page",
+        "No duplicate titles"
+      ],
+      "findings": [
+        {
+          "title": "Duplicate meta description on 9 destination pages",
+          "severity": "High",
+          "description": "'Editorial travel guide written by Lorraine Travel advisors.'",
+          "recommendation": "Write unique 120-155 char descriptions."
+        },
+        {
+          "title": "Long titles/descriptions",
+          "severity": "Medium",
+          "description": "15 titles >60, 14 descriptions >160 chars.",
+          "recommendation": "Trim."
+        }
+      ]
+    },
+    {
+      "name": "Schema",
+      "score": 90,
+      "what_works": [
+        "Organization, TravelAgency, FAQPage, Article, BreadcrumbList"
+      ],
+      "findings": []
+    },
+    {
+      "name": "AI Search Readiness",
+      "score": 92,
+      "what_works": [
+        "llms.txt",
+        "AI crawlers allowed in robots.txt"
+      ],
+      "findings": []
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Fixes",
+        "timeframe": "Week 1",
+        "items": [
+          "Verify/fix apex HTTPS",
+          "Unique destination meta descriptions"
+        ]
+      },
+      {
+        "name": "Phase 2: High-Impact Improvements",
+        "timeframe": "Weeks 2-3",
+        "items": [
+          "Security headers",
+          "Trim titles and descriptions"
+        ]
+      },
+      {
+        "name": "Phase 3: Content & Authority",
+        "timeframe": "Month 2",
+        "items": [
+          "Expand thin guides",
+          "More blog content"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring & Iteration",
+        "timeframe": "Ongoing",
+        "items": [
+          "Run seo-local, seo-google, CWV checks"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}
